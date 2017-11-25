@@ -3,3 +3,17 @@ One more time, I'm trying to change something.
 <h3 style="color:blue;"> Yay, it has worked! </h3>
 <p style="padding:60px 20px 60px 90px"> That's some padding. </p>
 <img src="http://www.html-helper.net/wp-content/uploads/2013/07/HTML.jpg" alt="RazDwaTrzy.com">
+<script>
+var x = document.getElementById("demo");
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+function showPosition(position) {
+    x.innerHTML = "Latitude: " + position.coords.latitude + 
+    "<br>Longitude: " + position.coords.longitude; 
+}
+</script>
